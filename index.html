@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Vertex Map</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+  <link href='jquery-ui.css' rel='stylesheet' />
+  <link href='style.css' rel='stylesheet' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+</head>
+
+<body>
+
+  <div class="welcome-first"></div>
+  <div class="welcome-second"></div>
+  <div class="welcome-third"></div>
+  <div class="welcome-fourth"></div>
+
+  <fieldset id="filter-by-tipo-verti">
+    <div id="list1" class="dropdown-check-list" tabindex="100">
+      <span class="anchor">Tipo Vértice / Cota</span>
+      <ul class="items">
+        <li><input name="filter-by-tipo-verti-input" id="COTA" type="checkbox" value="COTA" checked /><label
+            for="COTA">COTA</label></li>
+        <li><input name="filter-by-tipo-verti-input" id="VERT-GEO" type="checkbox" value="VERT-GEO" checked /><label
+            for="VERT-GEO">VERT-GEO</label></li>
+        <li><input name="filter-by-tipo-verti-input" id="VNMNM" type="checkbox" value="VNMNM" checked/><label
+            for="VNMNM">VNMNM</label>
+        </li>
+      </ul>
+    </div>
+  </fieldset>
+
+  <fieldset id="filter-by-region">
+    <div id="list2" class="dropdown-check-list" tabindex="100">
+      <span class="anchor">Región</span>
+      <ul class="items">
+        <li><input name="filter-by-region-input" id="antofagasta" type="checkbox" value="antofagasta" checked /><label
+            for="antofagasta">Antofagasta</label></li>
+        <li><input name="filter-by-region-input" id="arica-y-parinacota" type="checkbox" value="arica-y-parinacota"
+            checked /><label for="arica-y-parinacota">Arica y Parinacota</label></li>
+        <li><input name="filter-by-region-input" id="atacama" type="checkbox" value="atacama" checked /><label
+            for="atacama">Atacama</label>
+        </li>
+        <li><input name="filter-by-region-input" id="aysén-del-general-carlos-ibáñez-del-campo" type="checkbox"
+            value="aysén-del-general-carlos-ibáñez-del-campo" checked /><label
+            for="aysén-del-general-carlos-ibáñez-del-campo">Aysén del General Carlos Ibáñez del Campo</label></li>
+        <li><input name="filter-by-region-input" id="biobío" type="checkbox" value="biobío" checked /><label
+            for="biobío">Biobío</label></li>
+        <li><input name="filter-by-region-input" id="coquimbo" type="checkbox" value="coquimbo" checked /><label
+            for="coquimbo">Coquimbo</label></li>
+        <li><input name="filter-by-region-input" id="la-araucanía" type="checkbox" value="la-araucanía" checked /><label
+            for="la-araucanía">La Araucanía</label></li>
+        <li><input name="filter-by-region-input" id="libertador-general-bernardo-ohiggins" type="checkbox"
+            value="libertador-general-bernardo-ohiggins" checked /><label
+            for="libertador-general-bernardo-ohiggins">Libertador General Bernardo O'Higgins</label></li>
+        <li><input name="filter-by-region-input" id="los-lagos" type="checkbox" value="los-lagos" checked /><label
+            for="los-lagos">Los Lagos</label></li>
+        <li><input name="filter-by-region-input" id="los-ríos" type="checkbox" value="los-ríos" checked /><label
+            for="los-ríos">Los Ríos</label></li>
+        <li><input name="filter-by-region-input" id="magallanes-y-de-la-antártica-chilena" type="checkbox"
+            value="magallanes-y-de-la-antártica-chilena" checked /><label
+            for="magallanes-y-de-la-antártica-chilena">Magallanes y de la Antártica Chilena</label></li>
+        <li><input name="filter-by-region-input" id="maule" type="checkbox" value="maule" checked /><label
+            for="maule">Maule</label></li>
+        <li><input name="filter-by-region-input" id="ñuble" type="checkbox" value="ñuble" checked /><label
+            for="ñuble">Ñuble</label></li>
+        <li><input name="filter-by-region-input" id="tarapacá" type="checkbox" value="tarapacá" checked /><label
+            for="tarapacá">Tarapacá</label></li>
+        <li><input name="filter-by-region-input" id="valparaíso" type="checkbox" value="valparaíso" checked /><label
+            for="valparaíso">Valparaíso</label></li>
+      </ul>
+    </div>
+  </fieldset>
+
+  <div id="sidebar"></div>
+
+  <div id='map'></div>
+
+  <script src="script.js">
+  </script>
+
+</body>
+
+</html>
