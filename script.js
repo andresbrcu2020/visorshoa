@@ -1,7 +1,7 @@
 // loading data from Google Sheets - Sheet2 for the modals
 $(document).ready(function () {
   $.getJSON(
-    "https://sheets.googleapis.com/v4/spreadsheets/1Si8VXjSOf8iYXyvK9ZhjgNOwbzzIN6PNUsQigMaHlsg/values/Sheet2!A2:H10?majorDimension=ROWS&key=AIzaSyCU2x9AShd5qjAZNGCVlVbq1IBVPQAGKwo",
+    "YOUR-GOOGLE-SHEET-API",
     function (response) {
 
       // first modal
@@ -72,7 +72,7 @@ $(document).ready(function () {
 });
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoiYW5kcmVzYnJjdSIsImEiOiJjbGg5NzAzbGIwMXI4M3BvMnA2MjBnbmp1In0.H-EJGNgjWh64fm7BSGlXrA";
+  "YOUR-MAP-BOX-TOKEN";
 
 var map = new mapboxgl.Map({
   container: "map",
